@@ -1,0 +1,6 @@
+C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\BEL\bin\Debug\BEL.dll
+C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\BEL\bin\Debug\BEL.pdb
+C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\BEL\obj\Debug\BEL.csproj.AssemblyReference.cache
+C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\BEL\obj\Debug\BEL.csproj.CoreCompileInputs.cache
+C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\BEL\obj\Debug\BEL.dll
+C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\BEL\obj\Debug\BEL.pdb
