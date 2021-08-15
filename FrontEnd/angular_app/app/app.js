@@ -5,14 +5,15 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
     .when("/", {
         templateUrl : "views/pages/demopage.html"
     })
+    .when("/home", {
+        templateUrl : "views/pages/home.html",
+          controller: 'home'
+    })
     .when("/products", {
         templateUrl : "views/pages/products.html",
         controller: 'products'
     })
-    .when("/demo2", {
-        templateUrl : "views/pages/demo2.html",
-          controller: 'demo2'
-    })
+   
     .when("/products", {
         templateUrl : "views/pages/products.html",
         controller: 'products'

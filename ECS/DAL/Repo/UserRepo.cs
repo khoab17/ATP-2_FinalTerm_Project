@@ -24,6 +24,13 @@ namespace DAL
             return result;
         }
 
+        //Get All the Users
+        public static List<User> GetAllUsers()
+        {
+            List<User> users = context.Users.ToList();
+            return users;
+        }
+
         //Get All the Admins
         public static  List<User> GetAllAdmins()
         {

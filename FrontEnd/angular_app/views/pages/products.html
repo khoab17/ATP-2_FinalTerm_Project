@@ -1,3 +1,18 @@
-<table>
-  
+<table class="table">
+  <tr>
+    <td>Name</td>
+    <td>Id</td>
+    <td>Brand</td>
+    <td>Price</td>
+    <td>Unit</td>
+    <td>Seller</td>
+  </tr>
+  <tr ng-repeat="p in products">
+    <td>{{p.Name}}</td>
+    <td>{{p.Id}}</td>
+    <td>{{p.Brand}}</td>
+    <td>{{p.Price}}</td>
+    <td>{{p.Unit}}</td>
+    <td>{{p.SellerId}}</td>    
+  </tr>
 </table>

@@ -22,7 +22,6 @@ namespace BEL.Model
         public int CategoryId { get; set; }
         public int Unit { get; set; }
         public int SellerId { get; set; }
-        public Nullable<int> user_Id { get; set; }
 
         [NoMap]
         public virtual CategoryModel CategoryModel { get; set; }

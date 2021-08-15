@@ -11,6 +11,7 @@ namespace ECS.Controllers
 {
     public class UserController : ApiController
     {
+        //Get the user Role
         [Route("api/User/{id}/Type")]
         [HttpGet]
         public string GetUserType(int id)
@@ -18,6 +19,15 @@ namespace ECS.Controllers
             return UserService.GetUserType(id);
         }
 
+        //Get all the Users
+        [Route("api/Users/All")]
+        [HttpGet]
+        public List<UserModel> GetAllUsers()
+        {
+            return UserService.GetAllUsers();
+        }
+
+        //Get All the Admins
         [Route("api/Admin/GetAll")]
         [HttpGet]
         public List<UserModel> GetAdmin()
@@ -25,6 +35,7 @@ namespace ECS.Controllers
             return UserService.GetAllAdmins();
         }
 
+        //Get All the Buyers
         [Route("api/Buyer/GetAll")]
         [HttpGet]
         public List<UserModel> GetBuyers()
@@ -32,6 +43,7 @@ namespace ECS.Controllers
             return UserService.GetAllBuyers();
         }
 
+        //Get All the Sellers
         [Route("api/Seller/GetAll")]
         [HttpGet]
         public List<UserModel> GetSellers()

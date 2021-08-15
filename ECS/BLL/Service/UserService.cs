@@ -11,15 +11,43 @@ namespace BLL.Service
 {
     public class UserService
     {
-        static UserService()
+        /*static UserService()
         {
             AutoMapper.Mapper.Initialize(config => config.AddProfile<AutoMapperSetting>());
-        }
+        }*/
 
+        //Get user type
         public static string GetUserType(int id)
         {
             return UserRepo.GetUserType(id);
         }
+
+        //Get All the Users
+        public static List<UserModel> GetAllUsers()
+        {
+            var data = UserRepo.GetAllUsers();
+            List<UserModel> um = new List<UserModel>();
+            foreach (var item in data)
+            {
+                UserModel us = new UserModel()
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    Email = item.Email,
+                    Phone = item.Phone,
+                    DOB = item.DOB,
+                    Address = item.Address,
+                    RegDate = item.RegDate,
+                    Gender = item.Gender
+                };
+                um.Add(us);
+            }
+            return um;
+        }
+
+
+
+        //Get All the Admins
         public static List<UserModel> GetAllAdmins()
         {
             var data = UserRepo.GetAllAdmins();
@@ -42,6 +70,8 @@ namespace BLL.Service
             return um;
         }
 
+
+        //Get All the Buyers
         public static List<UserModel> GetAllBuyers()
         {
             var data = UserRepo.GetAllBuyers();
@@ -64,6 +94,8 @@ namespace BLL.Service
             return um;
         }
 
+
+        //Get All the Sellers
         public static List<UserModel> GetAllSellers()
         {
             var data = UserRepo.GetAllSellers();

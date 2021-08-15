@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using BLL.Service.MapperConfig;
 
 namespace ECS
 {
@@ -20,6 +21,7 @@ namespace ECS
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            AutoMapper.Mapper.Initialize(con => con.AddProfile<AutoMapperSetting>());
             EnableCorsAttribute cors = new EnableCorsAttribute("*","*","*");
             config.EnableCors(cors);
         }

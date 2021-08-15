@@ -63,7 +63,6 @@
           <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
           <ScalarProperty Name="Unit" ColumnName="Unit" />
           <ScalarProperty Name="SellerId" ColumnName="SellerId" />
-          <ScalarProperty Name="user_Id" ColumnName="user_Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

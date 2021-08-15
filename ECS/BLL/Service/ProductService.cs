@@ -12,10 +12,10 @@ namespace BLL.Service
 {
     public class ProductService
     {
-        static ProductService()
+       /* static ProductService()
         {
             AutoMapper.Mapper.Initialize(config => config.AddProfile<AutoMapperSetting>());
-        }
+        }*/
         public static List<ProductModel> GetAllProducts()
         {
             var temp= ProductRepo.GetAllProducts();
@@ -41,7 +41,6 @@ namespace BLL.Service
                 CategoryId = p.CategoryId,
                 Unit = p.Unit,
                 SellerId = p.SellerId,
-                user_Id = p.user_Id
             };
             ProductRepo.AddProduct(data);
         }

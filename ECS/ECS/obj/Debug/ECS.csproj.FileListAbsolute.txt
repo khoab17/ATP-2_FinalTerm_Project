@@ -55,9 +55,6 @@ C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\
 C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\ECS\bin\DAL.pdb
 C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\ECS\bin\DAL.dll.config
 C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\ECS\bin\AutoMapper.xml
-C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\ECS\bin\System.ValueTuple.dll
-C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\ECS\bin\AutoMapper.pdb
-C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\ECS\bin\System.ValueTuple.xml
 C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\ECS\bin\System.Web.Cors.dll
 C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\ECS\bin\System.Web.Http.Cors.dll
 C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\ECS\bin\System.Web.Http.Cors.xml

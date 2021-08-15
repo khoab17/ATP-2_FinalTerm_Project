@@ -59,7 +59,6 @@
     <Property Name="CategoryId" Type="int" Nullable="false" />
     <Property Name="Unit" Type="int" Nullable="false" />
     <Property Name="SellerId" Type="int" Nullable="false" />
-    <Property Name="user_Id" Type="int" />
   </EntityType>
   <EntityType Name="Status">
     <Key>
@@ -161,18 +160,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_dbo_Products_dbo_Users_user_Id">
-    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
-    <End Role="Products" Type="Self.Products" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Users">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Products">
-        <PropertyRef Name="user_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="ECSModelStoreContainer">
     <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
@@ -201,10 +188,6 @@
     </AssociationSet>
     <AssociationSet Name="FK_dbo_Products_dbo_Categories_CategoryId" Association="Self.FK_dbo_Products_dbo_Categories_CategoryId">
       <End Role="Categories" EntitySet="Categories" />
-      <End Role="Products" EntitySet="Products" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_Products_dbo_Users_user_Id" Association="Self.FK_dbo_Products_dbo_Users_user_Id">
-      <End Role="Users" EntitySet="Users" />
       <End Role="Products" EntitySet="Products" />
     </AssociationSet>
   </EntityContainer>
