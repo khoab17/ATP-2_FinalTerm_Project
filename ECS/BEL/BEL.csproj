@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Model\CategoryModel.cs" />
     <Compile Include="Model\CredentialModel.cs" />
+    <Compile Include="Model\NoMapAttribute.cs" />
     <Compile Include="Model\OrderDetailModel.cs" />
     <Compile Include="Model\OrderModel.cs" />
     <Compile Include="Model\ProductModel.cs" />

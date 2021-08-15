@@ -24,10 +24,12 @@ namespace BEL.Model
         public int SellerId { get; set; }
         public Nullable<int> user_Id { get; set; }
 
+        [NoMap]
         public virtual CategoryModel CategoryModel { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetailModel> OrderDetails { get; set; }
+        [NoMap]
         public virtual UserModel UserModel { get; set; }
     }
 }

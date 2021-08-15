@@ -15,11 +15,79 @@ namespace BLL.Service
         {
             AutoMapper.Mapper.Initialize(config => config.AddProfile<AutoMapperSetting>());
         }
-        /*public static UserModel GetAllProducts()
+
+        public static string GetUserType(int id)
         {
-            var temp = UserRepo.GetAllAdmins();
-            var data = AutoMapper.Mapper.Map<List<Product>, List<ProductModel>>(temp);
+            return UserRepo.GetUserType(id);
         }
-        */
+        public static List<UserModel> GetAllAdmins()
+        {
+            var data = UserRepo.GetAllAdmins();
+            List<UserModel> um = new List<UserModel>();
+            foreach(var item in data)
+            {
+                UserModel us = new UserModel()
+                {
+                    Id=item.Id,
+                    Name = item.Name,
+                    Email = item.Email,
+                    Phone = item.Phone,
+                    DOB = item.DOB,
+                    Address = item.Address,
+                    RegDate = item.RegDate,
+                    Gender = item.Gender
+                };
+                um.Add(us);
+            }
+            return um;
+        }
+
+        public static List<UserModel> GetAllBuyers()
+        {
+            var data = UserRepo.GetAllBuyers();
+            List<UserModel> um = new List<UserModel>();
+            foreach (var item in data)
+            {
+                UserModel us = new UserModel()
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    Email = item.Email,
+                    Phone = item.Phone,
+                    DOB = item.DOB,
+                    Address = item.Address,
+                    RegDate = item.RegDate,
+                    Gender = item.Gender
+                };
+                um.Add(us);
+            }
+            return um;
+        }
+
+        public static List<UserModel> GetAllSellers()
+        {
+            var data = UserRepo.GetAllSellers();
+            List<UserModel> um = new List<UserModel>();
+            foreach (var item in data)
+            {
+                UserModel us = new UserModel()
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    Email = item.Email,
+                    Phone = item.Phone,
+                    DOB = item.DOB,
+                    Address = item.Address,
+                    RegDate = item.RegDate,
+                    Gender = item.Gender
+                };
+                um.Add(us);
+            }
+            return um;
+        }
+
+
+
+
     }
 }

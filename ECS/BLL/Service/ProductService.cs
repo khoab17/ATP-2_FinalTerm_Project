@@ -31,7 +31,18 @@ namespace BLL.Service
 
         public static void AddProduct(ProductModel p)
         {
-            var data=AutoMapper.Mapper.Map<ProductModel, Product>(p);
+            //var data=AutoMapper.Mapper.Map<ProductModel, Product>(p);
+            Product data = new Product()
+            {
+                Name = p.Name,
+                Brand = p.Brand,
+                Description = p.Description,
+                Price = p.Price,
+                CategoryId = p.CategoryId,
+                Unit = p.Unit,
+                SellerId = p.SellerId,
+                user_Id = p.user_Id
+            };
             ProductRepo.AddProduct(data);
         }
     }

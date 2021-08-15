@@ -14,3 +14,6 @@ C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\
 C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\BLL\obj\Debug\BLL.pdb
 C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\BLL\bin\Debug\AutoMapper.dll
 C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\BLL\bin\Debug\AutoMapper.xml
+C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\BLL\bin\Debug\System.ValueTuple.dll
+C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\BLL\bin\Debug\AutoMapper.pdb
+C:\Users\syed\OneDrive\Work\ATP_Git\ATP-2 Final Project\ATP-2_FinalTerm_Project\ECS\BLL\bin\Debug\System.ValueTuple.xml
