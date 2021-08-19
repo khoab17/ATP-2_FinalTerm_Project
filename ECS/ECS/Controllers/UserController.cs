@@ -19,6 +19,14 @@ namespace ECS.Controllers
             return UserService.GetUserType(id);
         }
 
+        //Get the user Role
+        [Route("api/User/{id}")]
+        [HttpGet]
+        public UserModel GetUser(int id)
+        {
+            return UserService.GetUser(id);
+        }
+
         //Get all the Users
         [Route("api/Users/All")]
         [HttpGet]
@@ -33,6 +41,14 @@ namespace ECS.Controllers
         public List<UserModel> GetAdmin()
         {
             return UserService.GetAllAdmins();
+        }
+
+        //Add admin
+        [Route("api/Admin/Add")]
+        [HttpPost]
+        public void AddAdmin(UserCredentialModel u)
+        {
+            UserService.AddAdmin(u);
         }
 
         //Get All the Buyers

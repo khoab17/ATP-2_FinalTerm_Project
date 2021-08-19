@@ -31,7 +31,14 @@ namespace DAL
             return users;
         }
 
-        //Get All the Admins
+        // Return UserType
+        public static User GetUser(int id)
+        {
+            var result = context.Users.Where(x => x.Id == id).FirstOrDefault();
+            return result;
+        }
+
+        //Get All the Admins===========================================
         public static  List<User> GetAllAdmins()
         {
             string role = "Admin";
@@ -43,7 +50,18 @@ namespace DAL
             return admins;
         }
 
-        //Get All the Buyers
+        //Add admin
+        public static void AddAdmin(User u,Credential c)
+        {
+            u.RegDate = DateTime.Now;
+            context.Users.Add(u);
+            context.SaveChanges();
+            c.UserId = u.Id;
+            context.Credentials.Add(c);
+            context.SaveChanges();
+        }
+
+        //Get All the Buyers============================================
         public static List<User> GetAllBuyers()
         {
             string role = "Buyer";
@@ -55,7 +73,7 @@ namespace DAL
             return data;
         }
 
-        //Get All the Sellers
+        //Get All the Sellers===========================================
         public static List<User> GetAllSellers()
         {
             string role = "Seller";

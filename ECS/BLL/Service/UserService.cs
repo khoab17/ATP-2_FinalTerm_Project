@@ -45,6 +45,24 @@ namespace BLL.Service
             return um;
         }
 
+        //Get User by ID
+        public static UserModel GetUser(int id)
+        {
+            var u=UserRepo.GetUser(id);
+            UserModel user = new UserModel()
+            {
+                Id = u.Id,
+                Name = u.Name,
+                Email = u.Email,
+                Phone = u.Phone,
+                DOB = u.DOB,
+                Address = u.Address,
+                RegDate = u.RegDate,
+                Gender = u.Gender
+            };
+            return user;
+        }
+
 
 
         //Get All the Admins
@@ -69,6 +87,28 @@ namespace BLL.Service
             }
             return um;
         }
+        //Add admin
+        public static void AddAdmin(UserCredentialModel u)
+        {
+            User admin = new User()
+            {
+                Name=u.Name,
+                Email=u.Email,
+                Phone=u.Phone,
+                DOB=u.DOB,
+                Address=u.Address,
+                Gender=u.Gender
+            };
+            Credential cred = new Credential()
+            {
+                Password = u.Password,
+                UserType = "Admin",
+                UserId = u.Id
+            };
+            UserRepo.AddAdmin(admin,cred);
+      
+        }
+
 
 
         //Get All the Buyers

@@ -48,6 +48,7 @@
     <Compile Include="Model\OrderModel.cs" />
     <Compile Include="Model\ProductModel.cs" />
     <Compile Include="Model\StatusModel.cs" />
+    <Compile Include="Model\UserCredentialModel.cs" />
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

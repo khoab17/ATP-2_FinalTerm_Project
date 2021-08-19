@@ -34,5 +34,20 @@ namespace DAL.Repo
             context.Products.Add(p);
             context.SaveChanges();
         }
+
+
+        // Get All categories
+        public static List<Category> GetCategories()
+        {
+            var data = context.Categories.ToList();
+            return data;
+        }
+
+        //Get category by ID
+        public static Category getCategory(int id)
+        {
+            var data = context.Categories.Where(x => x.Id == id).FirstOrDefault();
+            return data;
+        }
     }
 }

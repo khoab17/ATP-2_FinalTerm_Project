@@ -21,6 +21,11 @@ namespace ECS
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.Routes.MapHttpRoute(
+               name: "Mulipara",
+               routeTemplate: "api/{controller}/{A}/{B}",
+               defaults: new { id = RouteParameter.Optional }
+           );
             AutoMapper.Mapper.Initialize(con => con.AddProfile<AutoMapperSetting>());
             EnableCorsAttribute cors = new EnableCorsAttribute("*","*","*");
             config.EnableCors(cors);

@@ -6,5 +6,6 @@ app.controller("home",function($scope,$http,ajax){
     function error(error){
 
     }
-
 });
+
+

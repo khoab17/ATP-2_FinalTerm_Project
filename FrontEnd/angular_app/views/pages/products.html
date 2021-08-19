@@ -1,18 +1,23 @@
-<table class="table">
+<table class="table table-hover">
   <tr>
-    <td>Name</td>
-    <td>Id</td>
-    <td>Brand</td>
-    <td>Price</td>
-    <td>Unit</td>
-    <td>Seller</td>
+    <th>Name</th>
+    <th>Id</th>
+    <th>Brand</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Unit</th>
+    <th>Seller</th>
+    <th></th>
   </tr>
   <tr ng-repeat="p in products">
     <td>{{p.Name}}</td>
     <td>{{p.Id}}</td>
     <td>{{p.Brand}}</td>
+    <td>{{p.Description}}</td>
     <td>{{p.Price}}</td>
     <td>{{p.Unit}}</td>
     <td>{{p.SellerId}}</td>    
+    <td><a  class="btn btn-primary btn-sm" href="#" role="button">update</a>
+    <a class="btn btn-danger btn-sm" href="#" role="button">remove</a></td>
   </tr>
 </table>
