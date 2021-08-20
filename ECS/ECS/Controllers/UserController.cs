@@ -35,6 +35,14 @@ namespace ECS.Controllers
             return UserService.GetAllUsers();
         }
 
+        // Update User
+        [Route("api/User/Update")]
+        [HttpPut]
+        public void UpdateUser(UserModel u)
+        {
+            UserService.UpdateUser(u);
+        }
+
         //Get All the Admins
         [Route("api/Admin/GetAll")]
         [HttpGet]

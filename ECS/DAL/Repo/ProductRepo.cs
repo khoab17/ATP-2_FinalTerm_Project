@@ -35,6 +35,14 @@ namespace DAL.Repo
             context.SaveChanges();
         }
 
+        //Update product
+        public static void UpdateProduct(Product p)
+        {
+            var product = context.Products.FirstOrDefault(x => x.Id == p.Id);
+            context.Entry(product).CurrentValues.SetValues(p);
+            context.SaveChanges();
+        }
+
 
         // Get All categories
         public static List<Category> GetCategories()
@@ -48,6 +56,13 @@ namespace DAL.Repo
         {
             var data = context.Categories.Where(x => x.Id == id).FirstOrDefault();
             return data;
+        }
+
+        //Add category
+        public static void AddCategory(Category c)
+        {
+            context.Categories.Add(c);
+            context.SaveChanges();
         }
     }
 }

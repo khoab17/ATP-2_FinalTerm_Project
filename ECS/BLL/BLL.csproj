@@ -52,6 +52,7 @@
     <Compile Include="Service\MapperConfig\AutoMapperSetting.cs" />
     <Compile Include="Service\MapperConfig\IgnoreNoMapExtensions.cs" />
     <Compile Include="Service\MapperConfig\NoMapAttribute.cs" />
+    <Compile Include="Service\OrderService.cs" />
     <Compile Include="Service\ProductService.cs" />
     <Compile Include="Service\UserService.cs" />
   </ItemGroup>

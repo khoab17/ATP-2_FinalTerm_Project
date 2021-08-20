@@ -5,7 +5,7 @@
       <td><a class="btn btn-primary" href="#!admins" role="button">Admins</a></td>
       <td><a class="btn btn-primary" href="#!buyers" role="button">Buyers</a></td>
       <td><a class="btn btn-primary" href="#!sellers" role="button">Sellers</a></td>
-      <td><a class="btn btn-primary" href="#!adduser" role="button">Add new user</a></td></tr>
+      <td><a class="btn btn-primary" href="#!adduser" role="button">Add Admin</a></td></tr>
   </table>
     <thead class="thead-inverse">
       <tr>
@@ -49,8 +49,7 @@
       <td>{{u.DOB}}</td>
       <td>{{u.Address}}</td>    
       <td>{{u.RegDate}}</td>
-      <td><a class="btn btn-primary btn-sm" href="#!edituser" ng-click="edituser(u.Id)" role="button">edit</a></td>
-      <td><button class="btn btn-primary btn-sm"  ng-click="edituser(u.Id)">edit</button></td>
+      <td><a class="btn btn-primary btn-sm" href=#!edituser/{{u.Id}} ng-click="edituser(u.Id)" role="button">edit</a></td>
       <td><a class="btn btn-danger btn-sm" href="#" role="button">delete</a></td>
     </tr>
   </table>

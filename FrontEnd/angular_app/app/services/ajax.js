@@ -10,5 +10,8 @@ app.factory("ajax",function($http,$q){
     post:function(url,data,success,error){
         $http.post(url,data).then(success,error);
     },
+    put: function (url, data, success, error) {
+      $http.put(url, data).then(success, error);
+    },
   }
 });

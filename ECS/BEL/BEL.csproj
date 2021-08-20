@@ -46,6 +46,7 @@
     <Compile Include="Model\NoMapAttribute.cs" />
     <Compile Include="Model\OrderDetailModel.cs" />
     <Compile Include="Model\OrderModel.cs" />
+    <Compile Include="Model\ProductCategory.cs" />
     <Compile Include="Model\ProductModel.cs" />
     <Compile Include="Model\StatusModel.cs" />
     <Compile Include="Model\UserCredentialModel.cs" />

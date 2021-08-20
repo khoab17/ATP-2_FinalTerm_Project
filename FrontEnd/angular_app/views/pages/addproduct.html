@@ -1,0 +1,41 @@
+<div class="maincontent">
+
+    <h3>
+        Add Product
+    </h3>
+    
+    <form action="" class="">
+        <table>
+            <tr>
+                <td><label for="" class="form">Name</label></td>
+                <td><input type="text" ng-model="p.Name" name="Name" class="form-control" id="" placeholder="mi Watch-2"></td>
+            </tr>
+            <tr>
+                <td><label for="" class="form">Brand</label></td>
+                <td><input type="text" ng-model="p.Brand" name="Brand" class="form-control" id="" placeholder="Xiomi" ></td>
+            </tr>
+            <tr>
+                <td><label for="" class="form">Description</label></td>
+                <td><input type="text" ng-model="p.Description" name="Phone" class="form-control" id="" placeholder="----"></td>
+            </tr>
+            <tr>
+                <td><label for="" class="form">Price</label></td>
+                <td><input type="Text" ng-model="p.Price" name="Price" class="form-control" id="" placeholder="12000" ></td>
+            </tr>
+            <tr>
+                <td><label for="" class="form">Category</label></td>
+                <td><select class="form-control" ng-model="p.CategoryId" id="" >
+                    <option ng-repeat="c in categories" value="{{c.Id}}">{{c.Name}}</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="" class="form">Unit</label></td>
+                <td><input type="text" ng-model="p.Unit" name="Address" class="form-control" id="" placeholder="10" ></td>
+            </tr>
+            <tr>
+                <td><input type="submit" class="form-control" ng-click="addproduct(p)" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+
+</div>

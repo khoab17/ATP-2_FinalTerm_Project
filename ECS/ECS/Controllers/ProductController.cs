@@ -35,5 +35,35 @@ namespace ECS.Controllers
         {
             ProductService.AddProduct(p);
         }
+
+        //Update Product
+        [Route("api/Product/Update")]
+        public void UpdateProduct(ProductModel p)
+        {
+            ProductService.UpdateProduct(p);
+        }
+
+        //Get All Categories
+        [Route("api/Category/All")]
+        [HttpGet]
+        public List<CategoryModel> GetCategories()
+        {
+            return ProductService.GetCategories();
+        }
+
+        //Get categories by id
+        [Route("api/Category/{id}")]
+        [HttpGet]
+        public CategoryModel GetCategory (int id)
+        {
+            return ProductService.GetCategory(id);
+        }
+        //Add Category
+        [Route("api/Category/Add")]
+        [HttpPost]
+        public void AddCategory(CategoryModel c)
+        {
+            ProductService.AddCategory(c);
+        }
     }
 }

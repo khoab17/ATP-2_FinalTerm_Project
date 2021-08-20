@@ -1,9 +1,10 @@
 var app = angular.module("myApp", ["ngRoute"]);
+var API_PORT = "https://localhost:44371";
 app.config(["$routeProvider","$locationProvider",function($routeProvider,$locationProvider) {
 
     $routeProvider
     .when("/", {
-        templateUrl : "views/pages/demopage.html"
+        templateUrl : "views/pages/home.html"
     })
     .when("/home", {
         templateUrl : "views/pages/home.html",
@@ -21,7 +22,7 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
         templateUrl : "views/pages/adduser.html",
           controller: 'adduser'
     })
-    .when("/edituser", {
+    .when("/edituser/:id", {
         templateUrl : "views/pages/edituser.html",
           controller: 'edituser'
     })
@@ -35,11 +36,22 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
         templateUrl : "views/pages/products.html",
         controller: 'products'
     })
-   
-    .when("/products", {
-        templateUrl : "views/pages/products.html",
-        controller: 'products'
-    })
+
+    .when("/addproduct", {
+      templateUrl : "views/pages/addproduct.html",
+      controller: 'addproduct'
+  })
+
+  .when("/product/edit/:id", {
+    templateUrl : "views/pages/editproduct.html",
+    controller: 'editproduct'
+})
+
+    .when("/orders", {
+      templateUrl : "views/pages/orders.html",
+      controller: 'orders'
+  })
+
     .otherwise({
         redirectTo:"/"
     });

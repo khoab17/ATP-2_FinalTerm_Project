@@ -86,6 +86,7 @@
     <Compile Include="Product.cs">
       <DependentUpon>ECS.tt</DependentUpon>
     </Compile>
+    <Compile Include="Repo\OrderRepo.cs" />
     <Compile Include="Repo\ProductRepo.cs" />
     <Compile Include="Repo\UserRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

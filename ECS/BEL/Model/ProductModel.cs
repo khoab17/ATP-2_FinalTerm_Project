@@ -8,11 +8,12 @@ namespace BEL.Model
 {
     public class ProductModel
     {
+        /*
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ProductModel()
         {
             this.OrderDetails = new HashSet<OrderDetailModel>();
-        }
+        }*/
 
         public int Id { get; set; }
         public string Name { get; set; }
@@ -23,12 +24,12 @@ namespace BEL.Model
         public int Unit { get; set; }
         public int SellerId { get; set; }
 
-        [NoMap]
-        public virtual CategoryModel CategoryModel { get; set; }
+        //[NoMap]
+        // public virtual CategoryModel CategoryModel { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderDetailModel> OrderDetails { get; set; }
-        [NoMap]
-        public virtual UserModel UserModel { get; set; }
+        // [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        // public virtual ICollection<OrderDetailModel> OrderDetails { get; set; }
+        // public virtual UserModel UserModel { get; set; }
     }
+
 }

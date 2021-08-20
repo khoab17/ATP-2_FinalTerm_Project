@@ -31,6 +31,14 @@ namespace DAL
             return users;
         }
 
+        //Update user
+        public static void UpdateUser(User u)
+        {
+            var user = context.Users.FirstOrDefault(x =>x.Id  == u.Id);
+            context.Entry(user).CurrentValues.SetValues(u);
+            context.SaveChanges();
+        }
+
         // Return UserType
         public static User GetUser(int id)
         {

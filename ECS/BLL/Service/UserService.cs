@@ -45,6 +45,23 @@ namespace BLL.Service
             return um;
         }
 
+        public static void UpdateUser(UserModel u)
+        {
+           // var u = UserRepo.GetUser(id);
+            User user = new User()
+            {
+                Id = u.Id,
+                Name = u.Name,
+                Email = u.Email,
+                Phone = u.Phone,
+                DOB = u.DOB,
+                Address = u.Address,
+                RegDate = u.RegDate,
+                Gender = u.Gender
+            };
+            UserRepo.UpdateUser(user);
+        }
+
         //Get User by ID
         public static UserModel GetUser(int id)
         {
