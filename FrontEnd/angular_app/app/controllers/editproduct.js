@@ -2,9 +2,18 @@ app.controller("editproduct",
 function($scope,$http,ajax,$routeParams){
     var id = $routeParams.id;
 
+
+
     ajax.get(API_PORT+"/api/Product/"+id,success,error);
     function success(response){
         $scope.product=response.data;
+
+        ajax.get(API_PORT+"/api/Category/All",success,error);
+        function success(response){
+            $scope.categories=response.data;
+            function error(error){
+            }
+            }
 
         $scope.editproduct = function (product) {
 

@@ -38,6 +38,7 @@ namespace ECS.Controllers
 
         //Update Product
         [Route("api/Product/Update")]
+        [HttpPut]
         public void UpdateProduct(ProductModel p)
         {
             ProductService.UpdateProduct(p);

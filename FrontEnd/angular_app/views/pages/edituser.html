@@ -1,48 +1,61 @@
 <div class="maincontent">
+    <table class="table table-striped table-inverse table-responsive">
+        <tr><td><a class="btn btn-primary" href="#!home" role="button">All Users</a></td>
+          <td><a class="btn btn-primary" href="#!admins" role="button">Admins</a></td>
+          <td><a class="btn btn-primary" href="#!buyers" role="button">Buyers</a></td>
+          <td><a class="btn btn-primary" href="#!sellers" role="button">Sellers</a></td>
+          <td><a class="btn btn-primary" href="#!adduser" role="button">Add Admin</a></td></tr>
+      </table>
     <h3>Update User</h3>
-    <form action="" class="">
+    <form name="myform" novalidate>
         <table>
             <tr>
                 <td><label for="" class="form">Name</label></td>
 
-                <td><input type="text" ng-model="user.Name" name="Name" class="form-control" id="" value="{{user.Name}}"></td>
+                <td><input type="text" ng-model="user.Name" name="Name" class="form-control" id="" value="{{user.Name}}" ng-required="true"></td>
+                <td><span class="text-danger" ng-show="myform.Name.$touched && myform.Name.$invalid">The name is required.</span></td>
             </tr>
 
             <tr>
                 <td><label for="" class="form">Email</label></td>
 
-                <td><input type="text" ng-model="user.Email" name="Email" class="form-control" id="" value="{{user.Email}}"></td>
+                <td><input type="text" ng-model="user.Email" name="Email" class="form-control" id="" value="{{user.Email}}" ng-required="true"></td>
+                <td><span class="text-danger" ng-show="myform.Email.$touched && myform.Email.$invalid"> email name is required.</span></td>
             </tr>
             <tr>
                 <td><label for="" class="form">Phone</label></td>
 
-                <td><input type="text" ng-model="user.Phone" name="Phone" class="form-control" id="" value="{{user.Phone}}"></td>
+                <td><input type="text" ng-model="user.Phone" name="Phone" class="form-control" id="" value="{{user.Phone}}" ng-required="true"></td>
+                <td><span class="text-danger" ng-show="myform.Phone.$touched && myform.Phone.$invalid"> phone number is required.</span></td>
             </tr>
 
             <tr>
                 <td><label for="" class="form" >Date of Birth</label></td>
 
-                <td><input type="date"  name="DOB" ng-model="user.DOB" class="form-control" id="" value="{{user.DOB}}"></td>
+                <td><input type="date"  name="DOB" ng-model="user.DOB" class="form-control" id="" value="{{user.DOB}}" ng-required="true"></td>
+                <td><span class="text-danger" ng-show="myform.DOB.$touched && myform.DOB.$invalid"> Date of birth is required.</span></td>
             </tr>
 
             <tr>
                 <td><label for="" class="form">Gender</label></td>
                 <td>
-                    <select  class="form-control" name="Gender" ng-model="user.Gender"  id="" value="{{user.Gender}}">
+                    <select  class="form-control" name="Gender" ng-model="user.Gender"  id="" value="{{user.Gender}}" ng-required="true">
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Other">Other</option></select>
                 </td>
+                <td><span class="text-danger" ng-show="myform.Gender.$touched && myform.Gender.$invalid"> gender is required.</span></td>
             </tr>
 
             <tr>
                 <td><label for="" class="form">Address</label></td>
 
-                <td><input type="text"  name="DOB" ng-model="user.Address"  class="form-control" id="" value="{{user.Address}}"></td>
+                <td><input type="text"  name="DOB" ng-model="user.Address"  class="form-control" id="" value="{{user.Address}}" ng-required="true"></td>
+                <td><span class="text-danger" ng-show="myform.Address.$touched && myform.Address.$invalid"> address is required.</span></td>
             </tr>
 
             <tr>
-                <td><input type="submit" class="form-control" ng-click="editUser(user)" value="Submit"></td>
+                <td><input type="submit" class="form-control" ng-click="editUser(user)" value="Update" ng-disabled="myform.$invalid"></td>
             </tr>
         </table>
     </form>

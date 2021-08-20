@@ -45,12 +45,29 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
   .when("/product/edit/:id", {
     templateUrl : "views/pages/editproduct.html",
     controller: 'editproduct'
-})
+  })
 
     .when("/orders", {
       templateUrl : "views/pages/orders.html",
       controller: 'orders'
   })
+    .when("/order/processing", {
+      templateUrl : "views/pages/orderprocessing.html",
+      controller: 'orderprocessing'
+  })
+  .when("/order/picked", {
+    templateUrl : "views/pages/orderpicked.html",
+    controller: 'orderpicked'
+  })
+  .when("/order/delivered", {
+    templateUrl : "views/pages/orderdelivered.html",
+    controller: 'orderdelivered'
+  })
+
+  .when("/category", {
+    templateUrl : "views/pages/category.html",
+    controller: 'category'
+})
 
     .otherwise({
         redirectTo:"/"

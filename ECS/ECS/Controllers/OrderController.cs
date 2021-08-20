@@ -26,5 +26,26 @@ namespace ECS.Controllers
             return OrderService.GetOrder(id);
         }
 
+        [Route("api/Order/Processing")]
+        [HttpGet]
+        public List<OrderModel> GetOrderProcessing()
+        {
+            return OrderService.GetOrderProcessing();
+        }
+
+        [Route("api/Order/Picked")]
+        [HttpGet]
+        public List<OrderModel> GetOrderPicked()
+        {
+            return OrderService.GetOrderPicked();
+        }
+
+        [Route("api/Order/Delivered")]
+        [HttpGet]
+        public List<OrderModel> GetOrderDelivered()
+        {
+            return OrderService.GetOrderDelivered();
+        }
+
     }
 }

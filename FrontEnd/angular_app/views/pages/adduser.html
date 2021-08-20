@@ -7,42 +7,51 @@
           <td><a class="btn btn-primary" href="#!adduser" role="button">Add Admin</a></td></tr>
       </table>
     <h3>Admin Registration</h3>
-    <form action="" class="">
+    <form  name="myform" novalidate>
         <table>
             <tr>
                 <td><label for="" class="form">Name</label></td>
-                <td><input type="text" ng-model="u.Name" name="Name" class="form-control" id="" placeholder="Mr.X"></td>
+                <td><input type="text" ng-model="u.Name" name="Name" class="form-control" id="" placeholder="Mr.X" ng-required="true"></td>
+                <td><span class="text-danger" ng-show="myform.Name.$touched && myform.Name.$invalid">The name is required.</span></td>
             </tr>
             <tr>
                 <td><label for="" class="form">Email</label></td>
-                <td><input type="email" ng-model="u.Email" name="Email" class="form-control" id="" placeholder="mrx@gmail.com" ></td>
+                <td><input type="email" ng-model="u.Email" name="Email" class="form-control" id="" placeholder="mrx@gmail.com" ng-required="true" ></td>
+                <td>
+                <span class="text-danger" ng-show="myform.Email.$touched && myform.Email.$invalid"> Enter a valid email.</span></td>
             </tr>
             <tr>
                 <td><label for="" class="form">Phone</label></td>
-                <td><input type="text" ng-model="u.Phone" name="Phone" class="form-control" id="" placeholder="+88017-----"></td>
+                <td><input type="text" ng-model="u.Phone" name="Phone" class="form-control" id="" placeholder="+88017-----" ng-required="true"></td>
+                <td><span class="text-danger" ng-show="myform.Phone.$touched && myform.Phone.$invalid"> phone number is required.</span></td>
             </tr>
             <tr>
                 <td><label for="" class="form">Date of birth</label></td>
-                <td><input type="date" ng-model="u.DOB" name="DOB" class="form-control" id="" ></td>
+                <td><input type="date" ng-model="u.DOB" name="DOB" class="form-control" id="" ng-required="true"></td>
+                <td><span class="text-danger" ng-show="myform.DOB.$touched && myform.DOB.$invalid"> Date of birth is required.</span></td>
             </tr>
             <tr>
                 <td><label for="" class="form">Gender</label></td>
-                <td><select class="form-control" ng-model="u.Gender" name="Gender" id="">
-                    <option value="Male">Male</option>
+                <td><select class="form-control" ng-model="u.Gender" name="Gender" ng-required="true">
+                    <option value="Male" >Male</option>
                     <option value="Female">Female</option>
                     <option value="Other">Other</option>
                 </select></td>
+                <td><span class="text-danger" ng-show="myform.Gender.$touched && myform.Gender.$invalid"> gender is required.</span></td>
+                
             </tr>
             <tr>
                 <td><label for="" class="form">Address</label></td>
-                <td><input type="text" ng-model="u.Address" name="Address" class="form-control" id="" placeholder="baridhara, Dhaka" ></td>
+                <td><input type="text" ng-model="u.Address" name="Address" class="form-control" id="" placeholder="baridhara, Dhaka" ng-required="true"></td>
+                <td><span class="text-danger" ng-show="myform.Address.$touched && myform.Address.$invalid"> address is required.</span></td>
             </tr>
             <tr>
                 <td><label for="" class="form">Password</label></td>
-                <td><input type="password" ng-model="u.Password" name="Password" class="form-control" id="" placeholder="" ></td>
+                <td><input type="password" ng-model="u.Password" name="Password" class="form-control" id="" placeholder="" ng-required="true"></td>
+                <td><span class="text-danger" ng-show="myform.Password.$touched && myform.Password.$invalid"> password is required.</span></td>
             </tr>
             <tr>
-                <td><input type="submit" class="form-control" ng-click="adduser(u)" value="Submit"></td>
+                <td><input type="submit" class="form-control" ng-click="adduser(u)" value="Add" ng-disabled="myform.$invalid"></td>
             </tr>
         </table>
     </form>

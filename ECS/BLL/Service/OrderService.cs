@@ -27,5 +27,24 @@ namespace BLL.Service
 
         }
 
+        public static List<OrderModel> GetOrderProcessing()
+        {
+            var temp = OrderRepo.GetOrederProcessing();
+            List<OrderModel> data = AutoMapper.Mapper.Map<List<Order>, List<OrderModel>>(temp);
+            return data;
+        }
+        public static List<OrderModel> GetOrderPicked()
+        {
+            var temp = OrderRepo.GetOrederPicked();
+            List<OrderModel> data = AutoMapper.Mapper.Map<List<Order>, List<OrderModel>>(temp);
+            return data;
+        }
+        public static List<OrderModel> GetOrderDelivered()
+        {
+            var temp = OrderRepo.GetOrederDelivered();
+            List<OrderModel> data = AutoMapper.Mapper.Map<List<Order>, List<OrderModel>>(temp);
+            return data;
+        }
+
     }
 }
