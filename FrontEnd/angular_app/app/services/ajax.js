@@ -13,5 +13,8 @@ app.factory("ajax",function($http,$q){
     put: function (url, data, success, error) {
       $http.put(url, data).then(success, error);
     },
+    delete: function (url, data, success, error) {
+      $http.delete(url, data).then(success, error);
+    },
   }
 });

@@ -32,10 +32,25 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
           controller: 'sellers'
     })
 
+    .when("/user/search/:id", {
+      templateUrl : "views/pages/searchuser.html",
+        controller: 'searchuser'
+  })
+
+  .when("/user/delete/:id", {
+    templateUrl : "views/pages/deleteuser.html",
+      controller: 'deleteuser'
+})
+
     .when("/products", {
         templateUrl : "views/pages/products.html",
         controller: 'products'
     })
+
+    .when("/product/search/:id", {
+      templateUrl : "views/pages/searchproduct.html",
+        controller: 'searchproduct'
+  })
 
     .when("/addproduct", {
       templateUrl : "views/pages/addproduct.html",

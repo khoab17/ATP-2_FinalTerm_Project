@@ -31,6 +31,15 @@ namespace DAL
             return users;
         }
 
+        //Get All the Users by name
+        public static List<User> GetAllUsersByName(string n)
+        {
+            List<User> users = (from u in context.Users
+                                where u.Name == n
+                                select u).ToList();
+            return users;
+        }
+
         //Update user
         public static void UpdateUser(User u)
         {
@@ -39,7 +48,15 @@ namespace DAL
             context.SaveChanges();
         }
 
-        // Return UserType
+        //Update user
+        public static void DeleteUser(int id)
+        {
+            var user = context.Users.FirstOrDefault(x => x.Id == id);
+            context.Users.Remove(user);
+            context.SaveChanges();
+        }
+
+        // Return User
         public static User GetUser(int id)
         {
             var result = context.Users.Where(x => x.Id == id).FirstOrDefault();

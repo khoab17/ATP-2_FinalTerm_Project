@@ -21,6 +21,16 @@ namespace DAL.Repo
             return data;
         }
 
+        //Get All the Products
+        public static List<Product> GetAllProductsByName(string n)
+        {
+
+            List<Product> products = (from p in context.Products
+                                where p.Name == n
+                                select p).ToList();
+            return products;
+        }
+
         //Search Product by Id
         public static Product GetProduct(int id)
         {

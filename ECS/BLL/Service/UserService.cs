@@ -45,6 +45,31 @@ namespace BLL.Service
             return um;
         }
 
+
+
+        //Get All the Users by name
+        public static List<UserModel> GetAllUsersByName(string n)
+        {
+            var data = UserRepo.GetAllUsersByName(n);
+            List<UserModel> um = new List<UserModel>();
+            foreach (var item in data)
+            {
+                UserModel us = new UserModel()
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    Email = item.Email,
+                    Phone = item.Phone,
+                    DOB = item.DOB,
+                    Address = item.Address,
+                    RegDate = item.RegDate,
+                    Gender = item.Gender
+                };
+                um.Add(us);
+            }
+            return um;
+        }
+
         public static void UpdateUser(UserModel u)
         {
            // var u = UserRepo.GetUser(id);
@@ -60,6 +85,13 @@ namespace BLL.Service
                 Gender = u.Gender
             };
             UserRepo.UpdateUser(user);
+        }
+
+
+        //Delete user
+        public static void DeleteUser(int id)
+        {
+            UserRepo.DeleteUser(id);
         }
 
         //Get User by ID

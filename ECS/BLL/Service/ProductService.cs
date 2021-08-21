@@ -28,6 +28,15 @@ namespace BLL.Service
             var data = AutoMapper.Mapper.Map<Product, ProductModel>(temp);
             return data;
         }
+
+        //Get all Products by name
+        public static List<ProductModel> GetAllProductsByName(string n)
+        {
+            var temp = ProductRepo.GetAllProductsByName(n);
+            var data = AutoMapper.Mapper.Map<List<Product>, List<ProductModel>>(temp);
+            return data;
+        }
+
         //Add Product
         public static void AddProduct(ProductModel p)
         {

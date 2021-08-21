@@ -6,7 +6,26 @@
       <td><a class="btn btn-primary" href="#!admins" role="button">Admins</a></td>
       <td><a class="btn btn-primary" href="#!buyers" role="button">Buyers</a></td>
       <td><a class="btn btn-primary" href="#!sellers" role="button">Sellers</a></td>
-      <td><a class="btn btn-primary" href="#!adduser" role="button">Add Admin</a></td></tr>
+      <td><a class="btn btn-primary" href="#!adduser" role="button">Add Admin</a></td>
+
+      <td>
+
+        <form name="searchform" novalidate >
+
+          <div class="input-group">
+              <div class="form-outline">
+                <input id="search-focus" type="search" id="form1" ng-model="x.find" name="find" class="form-control" ng-required="true" />
+              </div>
+              <a type="button" class="btn btn-primary"  href="#!user/search/{{x.find}}" ng-disabled="searchform.$invalid" >
+                 search
+              </a>
+            </div>
+
+      </form>
+      </td>
+
+      </tr>
+
   </table>
   <table class="table">
         <th>Name</th>
@@ -30,7 +49,7 @@
         <td>{{u.Address}}</td>    
         <td>{{u.RegDate}}</td>
         <td><a class="btn btn-primary btn-sm" href=#!edituser/{{u.Id}} ng-click="edituser(u.Id)" role="button">edit</a></td>
-      <td><a class="btn btn-danger btn-sm" href="#" role="button">delete</a></td>
+        <td><a class="btn btn-danger btn-sm" href="#!user/delete/{{u.Id}}" role="button">delete</a></td>
       </tr>
     </table>
 

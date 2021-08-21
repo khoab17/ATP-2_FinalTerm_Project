@@ -28,6 +28,14 @@ namespace ECS.Controllers
             return ProductService.GetProduct(id);
         }
 
+        //Search product by name
+        [Route("api/Product/Search/{id}")]
+        [HttpGet]
+        public List<ProductModel> GetAllProductByName(string id)
+        {
+            return ProductService.GetAllProductsByName(id);
+        }
+
         //Add Product =="api/Product/Add"
         [Route("api/Product/Add")]
         [HttpPost]

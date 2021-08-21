@@ -1,4 +1,4 @@
-app.controller("addproduct",function($scope,$http,ajax){
+app.controller("addproduct",function($scope,$http,$location,ajax){
 
 
     ajax.get(API_PORT+"/api/Category/All",success,error);
@@ -10,7 +10,9 @@ app.controller("addproduct",function($scope,$http,ajax){
 
     $scope.addproduct=function(product)
     {
-        ajax.post(API_PORT+"/api/Product/Add",product,function(response){},function(error){});
+        ajax.post(API_PORT+"/api/Product/Add",product,function(response){
+            $location.path("products");
+        },function(error){});
 
     }
 

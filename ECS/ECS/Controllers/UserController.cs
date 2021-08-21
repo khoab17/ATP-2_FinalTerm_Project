@@ -35,12 +35,28 @@ namespace ECS.Controllers
             return UserService.GetAllUsers();
         }
 
+        //Get all the Users
+        [Route("api/Users/Search/{id}")]
+        [HttpGet]
+        public List<UserModel> GetAllUsersByName(string id)
+        {
+            return UserService.GetAllUsersByName(id);
+        }
+
         // Update User
         [Route("api/User/Update")]
         [HttpPut]
         public void UpdateUser(UserModel u)
         {
             UserService.UpdateUser(u);
+        }
+
+        //Delete User
+        [Route("api/User/delete/{id}")]
+        [HttpDelete]
+        public void DeleteUser(int id)
+        {
+            UserService.DeleteUser(id);
         }
 
         //Get All the Admins

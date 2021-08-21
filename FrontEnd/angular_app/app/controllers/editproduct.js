@@ -1,5 +1,5 @@
 app.controller("editproduct",
-function($scope,$http,ajax,$routeParams){
+function($scope,$http,ajax,$location,$window,$routeParams){
     var id = $routeParams.id;
 
 
@@ -21,6 +21,8 @@ function($scope,$http,ajax,$routeParams){
                 product,
                 function (response) {
                   // console.log(response);
+                  $window.alert("Updated");
+                  $location.path("/products");
                 },
                 function (err) {
                   console.log(err);}

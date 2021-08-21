@@ -1,0 +1,49 @@
+<div class="maincontent">
+    <table class="table table-striped table-inverse table-responsive">
+      <td><a class="btn btn-primary" href="#!products" role="button">All products</a></td>
+        <td><a class="btn btn-primary" href="#!addproduct" role="button">Add product</a></td>
+        <td>
+              
+          <form name="searchform" novalidate >
+  
+              <div class="input-group">
+                  <div class="form-outline">
+                    <input id="search-focus" type="search" id="form1" ng-model="x.find" name="find" class="form-control" ng-required="true" />
+                  </div>
+                  <a type="button" class="btn btn-primary"  href="#!product/search/{{x.find}}" ng-disabled="searchform.$invalid" >
+                     search
+                  </a>
+                </div>
+  
+          </form>
+       
+  
+      </td>
+    </table>
+    
+  <table class="table table-hover">
+    <tr>
+      <th>Name</th>
+      <th>Id</th>
+      <th>Brand</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Unit</th>
+      <th>Seller</th>
+      <th></th>
+    </tr>
+    <tr ng-repeat="p in products">
+      <td>{{p.Name}}</td>
+      <td>{{p.Id}}</td>
+      <td>{{p.Brand}}</td>
+      <td>{{p.Description}}</td>
+      <td>{{p.Price}}</td>
+      <td>{{p.Unit}}</td>
+      <td>{{p.SellerId}}</td>    
+      <td><a class="btn btn-primary btn-sm" href=#!product/edit/{{p.Id}} ng-click="" role="button">update</a></td>
+      <td><a class="btn btn-danger btn-sm" href="#" role="button">remove</a></td>
+    </tr>
+  </table>
+  
+  </div>
+  

@@ -4,7 +4,24 @@
           <td><a class="btn btn-primary" href="#!admins" role="button">Admins</a></td>
           <td><a class="btn btn-primary" href="#!buyers" role="button">Buyers</a></td>
           <td><a class="btn btn-primary" href="#!sellers" role="button">Sellers</a></td>
-          <td><a class="btn btn-primary" href="#!adduser" role="button">Add Admin</a></td></tr>
+          <td><a class="btn btn-primary" href="#!adduser" role="button">Add Admin</a></td>
+          <td>
+
+            <form name="searchform" novalidate >
+    
+              <div class="input-group">
+                  <div class="form-outline">
+                    <input id="search-focus" type="search" id="form1" ng-model="x.find" name="find" class="form-control" ng-required="true" />
+                  </div>
+                  <a type="button" class="btn btn-primary"  href="#!user/search/{{x.find}}" ng-disabled="searchform.$invalid" >
+                     search
+                  </a>
+                </div>
+    
+          </form>
+    
+          </td>
+        </tr>
       </table>
     <h3>Admin Registration</h3>
     <form  name="myform" novalidate>
@@ -22,8 +39,8 @@
             </tr>
             <tr>
                 <td><label for="" class="form">Phone</label></td>
-                <td><input type="text" ng-model="u.Phone" name="Phone" class="form-control" id="" placeholder="+88017-----" ng-required="true"></td>
-                <td><span class="text-danger" ng-show="myform.Phone.$touched && myform.Phone.$invalid"> phone number is required.</span></td>
+                <td><input type="tel" ng-model="u.Phone" name="Phone" class="form-control" id="" pattern="[0-9]{11}" placeholder="+88017-----" ng-required="true"></td>
+                <td><span class="text-danger" ng-show="myform.Phone.$touched && myform.Phone.$invalid">Valid phone number is required.</span></td>
             </tr>
             <tr>
                 <td><label for="" class="form">Date of birth</label></td>

@@ -1,5 +1,5 @@
 app.controller("edituser",
-function($scope,$http,ajax,$routeParams){
+function($scope,$http,ajax,$location,$window,$routeParams){
     var id = $routeParams.id;
     //var message;
    // message.succ="";
@@ -14,6 +14,8 @@ function($scope,$http,ajax,$routeParams){
                 function (response) {
                   // console.log(response);
                  // message="Data Updated"
+                 $window.alert("Updated");
+                 $location.path("/home");
                 },
                 function (err) {
                   console.log(err);}
