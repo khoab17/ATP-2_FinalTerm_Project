@@ -52,6 +52,14 @@ namespace ECS.Controllers
             ProductService.UpdateProduct(p);
         }
 
+        //Delete Product
+        [Route("api/Product/Delete/{id}")]
+        [HttpDelete]
+        public void DeleteProduct(int id)
+        {
+            ProductService.DeleteProduct(id);
+        }
+
         //Get All Categories
         [Route("api/Category/All")]
         [HttpGet]

@@ -48,7 +48,7 @@ namespace DAL
             context.SaveChanges();
         }
 
-        //Update user
+        //Delete user
         public static void DeleteUser(int id)
         {
             var user = context.Users.FirstOrDefault(x => x.Id == id);

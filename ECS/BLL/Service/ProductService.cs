@@ -73,6 +73,13 @@ namespace BLL.Service
 
         }
 
+        //Delete Product
+
+        public static void DeleteProduct(int id)
+        {
+            ProductRepo.DeleteProduct(id);
+        }
+
         //Get All the categories
         public static List<CategoryModel> GetCategories()
         {

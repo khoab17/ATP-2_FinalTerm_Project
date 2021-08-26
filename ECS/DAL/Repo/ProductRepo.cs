@@ -53,6 +53,15 @@ namespace DAL.Repo
             context.SaveChanges();
         }
 
+        //Delete product
+        public static void DeleteProduct(int id)
+        {
+            var product = context.Products.FirstOrDefault(x => x.Id == id);
+            context.Products.Remove(product);
+            context.SaveChanges();
+        }
+
+
 
         // Get All categories
         public static List<Category> GetCategories()

@@ -62,6 +62,11 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
     controller: 'editproduct'
   })
 
+  .when("/product/delete/:id", {
+    templateUrl : "views/pages/deleteproduct.html",
+      controller: 'deleteproduct'
+})
+
     .when("/orders", {
       templateUrl : "views/pages/orders.html",
       controller: 'orders'

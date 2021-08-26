@@ -17,6 +17,7 @@ namespace BEL.Model
         public int Id { get; set; }
         public System.DateTime OrderTime { get; set; }
         public int StatusId { get; set; }
+        public string StatusName { get; set; }
         public int CustomerId { get; set; }
         public string OrderAddress { get; set; }
         public double Amount { get; set; }

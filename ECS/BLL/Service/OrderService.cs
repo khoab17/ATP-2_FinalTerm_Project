@@ -15,7 +15,32 @@ namespace BLL.Service
         public static List<OrderModel> GetOrders()
         {
             var temp=OrderRepo.GetOreders();
-            List<OrderModel> data=AutoMapper.Mapper.Map<List<Order>, List<OrderModel>>(temp);
+            List<OrderModel> data = new List<OrderModel>();
+           // List<OrderModel> data=AutoMapper.Mapper.Map<List<Order>, List<OrderModel>>(temp);
+           foreach(var item in temp)
+            {
+                OrderModel o = new OrderModel();
+                o.Id = item.Id;
+                o.OrderTime = item.OrderTime;
+                o.StatusId = item.StatusId;
+                if(item.StatusId==1)
+                {
+                    o.StatusName = "Processing";
+                }
+                else if(item.StatusId==2)
+                {
+                    o.StatusName = "Picked";
+                }
+                else if(item.StatusId==3)
+                {
+                    o.StatusName = "Delivered";
+                }
+                o.CustomerId = item.CustomerId;
+                o.OrderAddress = item.OrderAddress;
+                o.Amount = item.Amount;
+                data.Add(o);
+            }
+
             return data;
         }
 
